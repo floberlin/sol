@@ -15,7 +15,7 @@ contract BaseContract is Initializable {
     }
 }
 
-contract Greeter is BaseContract{
+contract GreeterV2 is BaseContract{
 
   function greet() public view returns (string memory) {
     return greeting;
