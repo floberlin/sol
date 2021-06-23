@@ -5,18 +5,21 @@ import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol"
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 
-contract Validator is Initializable, AccessControlUpgradeable {
-    
-    function initialize() public initializer {
-        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
-    }
-
+contract BaseContract is Initializable, AccessControlUpgradeable {
     bytes32 public constant VALIDATOR_ROLE = keccak256("VALIDATOR_ROLE");
     string[] public hash;
     mapping (string => bool) public _hashExists;
 
     event DataAdded(address dataOwner, string dataHash);
 
+    function initialize() public initializer {
+        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
+    }
+}
+
+
+contract Validator is BaseContract {
+    
     function grantRoleValidator(address valiReqAddr) public {
         grantRole(VALIDATOR_ROLE, valiReqAddr);
     }
@@ -31,9 +34,22 @@ contract Validator is Initializable, AccessControlUpgradeable {
         _hashExists[_hash] = true;
         hash.push(_hash);
     }
-
+    
     function getData(string memory _hash) public view returns (bool) {
         require(_hashExists[_hash], "Hash does not exist");
         return (true);
     }
+    // tbd
+    function getHash4iot(address addr) public view returns (string[] memory) {
+        return(hash);
+    }
+
+    function getHash4iotSELF() public view returns (string[] memory) {
+        return(hash);
+    }
+
+    function getHashArray() public view returns (string[] memory) {
+        return(hash);
+    }
+    // tbd -end
 }

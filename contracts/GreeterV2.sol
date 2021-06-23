@@ -5,17 +5,14 @@ import "hardhat/console.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 
+contract GreeterV2 is Initializable{
 
-contract BaseContract is Initializable {
-    string greeting;
+   string greeting;
 
     function initialize(string memory _greeting) public initializer {
         console.log("Deploying a Greeter with greeting:", _greeting);
         greeting = _greeting;
     }
-}
-
-contract GreeterV2 is BaseContract{
 
   function greet() public view returns (string memory) {
     return greeting;

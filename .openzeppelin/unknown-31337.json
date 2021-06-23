@@ -7,7 +7,7 @@
       "hash": "0xa22e0353aca806bcadb1bc1e34dca681299d494689643efc414c2370ac21769b",
       "type": 0,
       "accessList": null,
-      "blockHash": "0x9f372b4423f13d809c35e6d1d9221c6582d497fd9e93e12cbca7f27686fd2fbb",
+      "blockHash": "0x1c9bdf27c15554a042eb0e1d32a86660a826aad16faeadd8e2eb163af0b2d890",
       "blockNumber": 2,
       "transactionIndex": 0,
       "confirmations": 1,
@@ -37,14 +37,14 @@
   "proxies": [
     {
       "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
-      "txHash": "0x7239189008fc89f9362da81299dd3bb00ff4f389e6721388d66827a1cc6f9cbb",
+      "txHash": "0x7d899827d5a9e5e477d9a32ccf69c99b03a1a3bd4d8eeced8c2112e27067d471",
       "kind": "transparent"
     }
   ],
   "impls": {
     "b6b57f15229ce5fdbccff292865edfd87f1dede756a1e163158d2549fc97f473": {
       "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-      "txHash": "0xebc357e05ab14930fb9d2152f141a722366253dc44adbe79fc181ccafbe9f456",
+      "txHash": "0x547e2899799dc1cb7edb61e4c182369ddf307f4850123966fa759f9f28ac5178",
       "layout": {
         "storage": [
           {
@@ -60,10 +60,10 @@
             "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:28"
           },
           {
-            "contract": "BaseContract",
+            "contract": "GreeterV2",
             "label": "greeting",
             "type": "t_string_storage",
-            "src": "contracts\\Greeter.sol:10"
+            "src": "contracts\\GreeterV2.sol:10"
           }
         ],
         "types": {
