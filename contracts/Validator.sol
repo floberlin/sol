@@ -5,21 +5,18 @@ import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol"
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 
-contract BaseContract is Initializable, AccessControlUpgradeable {
+contract Validator is Initializable, AccessControlUpgradeable {
+    
+    function initialize() public initializer {
+        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
+    }
+
     bytes32 public constant VALIDATOR_ROLE = keccak256("VALIDATOR_ROLE");
     string[] public hash;
     mapping (string => bool) public _hashExists;
 
     event DataAdded(address dataOwner, string dataHash);
 
-    function initialize() public initializer {
-        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
-    }
-}
-
-
-contract Validator is BaseContract {
-    
     function grantRoleValidator(address valiReqAddr) public {
         grantRole(VALIDATOR_ROLE, valiReqAddr);
     }

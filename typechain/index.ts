@@ -12,6 +12,7 @@ export type { ERC165Upgradeable } from "./ERC165Upgradeable";
 export type { IERC165Upgradeable } from "./IERC165Upgradeable";
 export type { Greeter } from "./Greeter";
 export type { GreeterV2 } from "./GreeterV2";
+export type { MagentaDAO } from "./MagentaDAO";
 export type { SCItem } from "./SCItem";
 export type { BaseContract } from "./BaseContract";
 export type { Validator } from "./Validator";
@@ -27,6 +28,7 @@ export { ERC165Upgradeable__factory } from "./factories/ERC165Upgradeable__facto
 export { IERC165Upgradeable__factory } from "./factories/IERC165Upgradeable__factory";
 export { Greeter__factory } from "./factories/Greeter__factory";
 export { GreeterV2__factory } from "./factories/GreeterV2__factory";
+export { MagentaDAO__factory } from "./factories/MagentaDAO__factory";
 export { SCItem__factory } from "./factories/SCItem__factory";
 export { BaseContract__factory } from "./factories/BaseContract__factory";
 export { Validator__factory } from "./factories/Validator__factory";

@@ -57,6 +57,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.GreeterV2__factory>;
     getContractFactory(
+      name: "MagentaDAO",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.MagentaDAO__factory>;
+    getContractFactory(
       name: "SCItem",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.SCItem__factory>;
